@@ -2,7 +2,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from apify_fingerprint_datapoints import get_fingerprint_network
+from browserforge.datapoints import get_fingerprint_network
 
 from browserforge.bayesian_network import BayesianNetwork, get_possible_values
 from browserforge.headers import HeaderGenerator

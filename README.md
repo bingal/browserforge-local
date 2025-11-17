@@ -1,9 +1,9 @@
 <h1 align="center">
-    BrowserForge
+    BrowserForge-local
 </h1>
 
 <p align="center">
-    <a href="https://github.com/daijro/browserforge/blob/main/LICENSE">
+    <a href="https://github.com/bingal/browserforge-local/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/daijro/browserforge.svg?color=yellow">
     </a>
     <a href="https://python.org/">
@@ -27,16 +27,27 @@
 </p>
 
 <h4 align="center">
-    🎭 Intelligent browser header & fingerprint generator
+    🎭 Intelligent browser header & fingerprint generator (offline-ready)
 </h4>
+
+<p align="center">
+    <a href="README.zh-CN.md">查看中文文档</a>
+</p>
 
 ---
 
 ## What is it?
 
-BrowserForge is a browser header and fingerprint generator that mimics the frequency of different browsers, operating systems, and devices found in the wild.
+BrowserForge-local is a browser header and fingerprint generator that mimics the frequency of different browsers, operating systems, and devices found in the wild.
 
-It is a reimplementation of [Apify's fingerprint-suite](https://github.com/apify/fingerprint-suite) in Python.
+It is a reimplementation of [Apify's fingerprint-suite](https://github.com/apify/fingerprint-suite) in Python, forked from [`daijro/browserforge`](https://github.com/daijro/browserforge).
+
+### What’s different in BrowserForge-local
+
+- Removes runtime network dependency: datasets are embedded and loaded locally.
+- Disables any update checks or downloads; data ships with package releases.
+- Adds a build-time script to refresh datasets from upstream and bundle them.
+- Preserves Apache-2.0 compliance with a `NOTICE` for upstream attribution.
 
 ## Features
 
@@ -45,11 +56,22 @@ It is a reimplementation of [Apify's fingerprint-suite](https://github.com/apify
 - Easy and simple for humans to use
 - Extensive customization options for browsers, operating systems, devices, locales, and HTTP version
 - Written with type safety
+- Offline-ready: bundled datasets, no runtime downloads
 
 ## Installation
 
 ```
 pip install browserforge[all]
+```
+
+## Build-time dataset refresh (optional)
+
+If you want to bundle the latest upstream datasets in a release:
+
+```
+python3 -m pip install apify_fingerprint_datapoints
+python3 scripts/update_datapoints.py
+poetry build && poetry publish
 ```
 ## Usage
 

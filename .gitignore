@@ -12,6 +12,8 @@ __pycache__/
 
 # Model files
 *.json
+!browserforge/**/data/**
+!browserforge/**/*.json
 
 # Distribution / packaging
 .Python
@@ -171,4 +173,6 @@ cython_debug/
 .trunk
 
 # daownloaded files
+# Allow package-embedded data directory
 data/
+!browserforge/**/data/**

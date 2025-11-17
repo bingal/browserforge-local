@@ -9,7 +9,7 @@ description = "Intelligent browser header & fingerprint generator"
 authors = ["daijro <daijro.dev@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/daijro/browserforge"
+repository = "https://github.com/bingal/browserforge-local"
 keywords = [
     "client",
     "headers",
@@ -25,6 +25,12 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Browsers",
     "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [{ include = "browserforge" }]
+include = [
+    "browserforge/datapoints/data/*",
+    "browserforge/injectors/data/*",
+    "NOTICE",
 ]
 
 [tool.poetry.dependencies]
