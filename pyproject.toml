@@ -3,7 +3,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "browserforge"
+name = "browserforge-local"
 version = "1.2.4"
 description = "Intelligent browser header & fingerprint generator"
 authors = ["daijro <daijro.dev@gmail.com>"]
