@@ -61,7 +61,7 @@ It is a reimplementation of [Apify's fingerprint-suite](https://github.com/apify
 ## Installation
 
 ```
-pip install browserforge[all]
+pip install browserforge-local[all]
 ```
 
 ## Build-time dataset refresh (optional)

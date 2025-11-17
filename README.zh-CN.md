@@ -36,7 +36,7 @@ BrowserForge-local 是一个浏览器请求头与指纹生成器，按照真实�
 ## 安装
 
 ```
-pip install browserforge[all]
+pip install browserforge-local[all]
 ```
 
 ## 构建期数据更新（可选）
